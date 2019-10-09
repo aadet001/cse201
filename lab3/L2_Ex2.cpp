@@ -24,10 +24,30 @@ log2 of the first number
 
 using namespace std; 
 
+double sum(double x, double y, double z){ 
+
+	return x+y+z; 
+}
+
+double avg(double x, double y, double z){
+	return sum(x,y,z)/3;
+}
+
 int main()
 {
-	double num1, num2, num3; 	
+	double input1, input2, input3; 	
+	cout << "input1: "; 
+	cin >> input1; 
+	cout << "input2: "; 
+	cin >> input2; 
+	cout << "input3: "; 
+	cin >> input3; 
 
+	cout << "the sum of input1, input2, input3: " << sum(input1, input2, input3) << endl; 
 
+	cout << "the average of input1, input2, input3: " << avg(input1, input2, input3) << endl; 
+
+	cout << "the log2 of input1: " << log2(input1) << endl; 
+	
 	return 0;
 }

@@ -23,9 +23,17 @@ Print the output string
 using namespace std; 
 
 int main(){
-	input_string = "Four score and seven years ago our fathers"
-	//output_string = "carefree and no tears"
+	string input_string = "Four score and seven years ago our fathers"; 
+	//string output_string2 = "carefree and no tears";
+	string output_string =""; 
+	int pos[] = {6,11,3,9,35,3,9,9,4,11,12,13,4,12,1,4,37,9,36,40,41};
+
+	for (int i=0; i<21; i++){
+		output_string += input_string[pos[i]];	
+	}
 	
+	//6,11,3,9-0,3,9,9 + 4 + 11,12,13 + 12,1 + 37,9,36,40,41
+	cout << output_string << endl; 
 
 	return 0; 
 }
