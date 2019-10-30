@@ -1,0 +1,3 @@
+PassbyValue sends a copy of the value assigned to a value through the function. Any changes made to this copy doesn't exceed the functionl parameters. 
+
+PassbyReference sends a reference to the location of the value through the function. Any changes made the this value changes all other references to the value, even outside of the function. 

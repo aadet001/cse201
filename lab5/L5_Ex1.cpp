@@ -35,17 +35,17 @@ int main()
 	while(user_input != 'X'){
 		switch(user_input){
 			case 'A': 
-				system("clear");
+				// system("clear");
 				timesTable(); 
 				break;
 			case 'P': 
-				system("clear");
+				// system("clear");
 				asterisk(); 
 				break; 
 			case 'X': 
 				break; 
 			default: 
-				system("clear");  
+				// system("clear");  
 				cout << "invalid input" << endl; 
 
 		}
