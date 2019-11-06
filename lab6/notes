@@ -1,0 +1,11 @@
+Exercise 1: 
+keep track of total year to date purchases. 
+if items to be purchased costs more that customer limit, deny purchase
+
+total number of sales
+
+
+Exercise 2: 
+new puchase will be denied if unpaid_balance(of new  purchase+any previous) > credit_limit
+function that return approval or denial of (new_purchase)
+pass purchase price to member function... unpaid balance(temp) += purchase price... then compare to credit line
