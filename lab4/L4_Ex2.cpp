@@ -1,20 +1,19 @@
 /*
 
-CSE201-F19 Tuesday Lab (depending on your lab day)
+CSE201-F19 Tuesday Lab 
 
 file L4_Ex2.cpp
 
 author Akinyemi Adetunji
 
-date month day, 2019
+date 10 22, 2019
 
-DESCRIPTION: <provide here a brief and concise description of what this program does>
+DESCRIPTION: use loop to print out pattern
 
-ALGORITHM: <provide an algorithm that you use to solve this problem>
+ALGORITHM: use loop and nested loop. outter loop for iteration and nested loop for each asterisk. 
 
 */
 
-// int argc, char const *argv[]
 
 #include <iostream>
 

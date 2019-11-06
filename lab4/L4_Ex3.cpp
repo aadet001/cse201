@@ -1,17 +1,16 @@
 /*
 
-CSE201-F19 Tuesday Lab (depending on your lab day)
+CSE201-F19 Tuesday Lab
 
 file L4_Ex3.cpp
 
 author Akinyemi Adetunji
 
-date month day, 2019
+date 10 22, 2019
 
-DESCRIPTION: <provide here a brief and concise description of what this program does>
+DESCRIPTION: Using switch statement to design a menu selection and accept an user input.  
 
-ALGORITHM: <provide an algorithm that you use to solve this problem>
-
+ALGORITHM: If the user input is 'A', then print out the exercise. If the user input is 'P' then print out the exercise. The program should run continuously until user input 'X' to exit the program.
 */
 
 // int argc, char const *argv[]
@@ -120,6 +119,8 @@ void asterisk(){
 int main()
 {
 	char user_input; 
+	
+	cout << "Enter 'A' to print 9x9 grid or enter 'P' to display pattern or 'X' to exit program: ";
 
 	cin >> user_input; 
 	while(user_input != 'X'){
@@ -135,10 +136,11 @@ int main()
 			case 'X': 
 				break; 
 			default: 
-				system("clear");  
-				cout << "invalid input" << endl; 
+				//system("clear");  
+				cout << "invalid input. \n"; 
 
 		}
+		cout << "Enter 'A' to print 9x9 grid or enter 'P' to display pattern or 'X' to exit program: "; 
 		cin >> user_input; 
 	}
 

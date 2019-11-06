@@ -1,14 +1,15 @@
 /*
 
-CSE201-F19 Tuesday Lab (depending on your lab day)
+CSE201-F19 Tuesday Lab 
 
 file L4_Ex1.cpp
 
 author Akinyemi Adetunji
 
-date month day, 2019
+date 10 22, 2019
 
-DESCRIPTION: <provide here a brief and concise description of what this program does>
+DESCRIPTION: print out a 9 by 9 multiplication table as followed in a grid.
+
 
 ALGORITHM: <provide an algorithm that you use to solve this problem>
 
