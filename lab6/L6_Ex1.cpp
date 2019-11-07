@@ -17,7 +17,8 @@ ALGORITHM:
 
 */
 
-#include <iostream> 
+#include <iostream>
+#include <cstdlib> 
 #include <vector> 
 
 using namespace std; 
@@ -30,7 +31,7 @@ public:
 	string get_address() const; 
 	string get_city() const; 
 	string get_state() const;
-	double credit_limit=0; 
+	double credit_limit = rand()%1000+10000; 
 
 	
 	
@@ -69,7 +70,34 @@ string Customer::get_state() const{
 	return state; 
 } 
 
+Customer makeNewCustomer(){
+	//name, address, city, sate, zipcode
+	string n, a, c, s, z; 
+	cout << "Name: ";
+	// cin >> n; 
+	getline(cin, n);
+	cout << "Address: ";
+	// cin >> a;  
+	getline(cin, a);
+	cout << "City: ";
+	// cin >> c; 
+	getline(cin, c);
+	cout << "State: ";
+	// cin >> s; 
+	getline(cin, s);
+	cout << "Zipcode: "; 
+	// cin >> z; 
+	getline(cin, z);
+
+	Customer customer(n,a,c,s,z); 
+
+
+	return customer; 
+}
+
 int main(){
+	vector<Customer> v;
+
 	Customer c("John Doe", "123 Evergreen Terrace", "Springfield", "Massachussettes", "10129");  
 
 	cout << c.get_name() << endl
@@ -77,6 +105,13 @@ int main(){
 		<< c.get_city() << endl 
 		<< c.get_state() << endl;
 	
+	v.push_back(c); 
+
+	v.push_back(makeNewCustomer()); 
+	cout << v[1].get_name() << endl
+		<< v[1].get_address() << endl
+		<< v[1].get_city() << endl 
+		<< v[1].get_state() << endl;
 	//do while loop acccepting customer information until user enters terminating character. 
 	
 
