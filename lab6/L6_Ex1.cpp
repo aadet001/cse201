@@ -19,6 +19,8 @@ ALGORITHM:
 
 #include <iostream>
 #include <cstdlib> 
+//#include <stdlib.h>
+#include <time.h>
 #include <vector> 
 
 using namespace std; 
@@ -31,8 +33,10 @@ public:
 	string get_address() const; 
 	string get_city() const; 
 	string get_state() const;
-	double credit_limit = rand()%1000+10000; 
-
+	double get_creditLimit(); 
+	 
+	double balance; 
+	void newPurchase();
 	
 	
 private: 
@@ -40,7 +44,8 @@ private:
 	string address; 
 	string city; 
 	string state; 
-	string zipcode; 	
+	string zipcode; 
+	double credit_limit = rand()%10000+1000;	
 			
 }; 
 
@@ -69,6 +74,18 @@ string Customer::get_city() const{
 string Customer::get_state() const{
 	return state; 
 } 
+double Customer::get_creditLimit() {
+	return credit_limit;
+}
+//string
+void Customer::newPurchase(/*int purchase price*/){
+	//new purchase price
+	//if npp+curbalance>credit_limit
+	//return purchase denied
+	//else 
+	// valid purchase -> curbal += npp
+	
+}
 
 Customer makeNewCustomer(){
 	//name, address, city, sate, zipcode
@@ -95,7 +112,18 @@ Customer makeNewCustomer(){
 	return customer; 
 }
 
+void printCustomerList(vector<Customer> v){
+	for(int i = 0; i < v.size(); i++){
+		cout << v[i].get_name() << endl
+			<< v[i].get_address() << endl
+			<< v[i].get_city() << endl 
+			<< v[i].get_state() << endl
+			<< v[i].get_creditLimit() << endl;
+	}
+}
+
 int main(){
+	char input; 
 	vector<Customer> v;
 
 	Customer c("John Doe", "123 Evergreen Terrace", "Springfield", "Massachussettes", "10129");  
@@ -108,15 +136,38 @@ int main(){
 	v.push_back(c); 
 
 	v.push_back(makeNewCustomer()); 
-	cout << v[1].get_name() << endl
-		<< v[1].get_address() << endl
-		<< v[1].get_city() << endl 
-		<< v[1].get_state() << endl;
+	
 	//do while loop acccepting customer information until user enters terminating character. 
 	
-
-
-
+	//menu
+	cout << "1. Add new customer.\n"
+		<< "2. Make new purchase.\n"
+		<< "3. Print all customers.\n"
+		<< "4. Exit.\n";
+	//choose cur customer 
+	 
+	//while loop or go-to
+	cout << "$: ";
+	cin >> input; 
+	switch(input){
+		case '1':
+			v.push_back(makeNewCustomer());
+			break;  
+		case '2': 
+			//new purchase
+			// enter pur price
+			// pass to function
+			break; 
+		case '3': 
+			printCustomerList(v); 
+			break; 	
+		case '4': 
+			break; 
+		default:
+			cout << "invalid input" << endl; 
+			break; 
+	} 
+	
 
 
 	return 0; 
