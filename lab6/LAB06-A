@@ -1,0 +1,53 @@
+1. The avg_building_cost, avg_sale_price, and city can be put into single class. As well at the calculations for best_profit and best_city. 
+	class profit {
+	public: 
+		profit(); 
+		void set_avg_buidling_cost(double b);
+		void set_avg_sale_price(double s);
+		void set_city(string c);
+		double get_avg_buidling_cost();
+		double get_avg_sale_price();
+		string get_city();
+		void calc_avg_profit();
+		void get_best_profit();
+
+	private: 
+		double avg_sale_price = 0.0; 
+		double avg_building_cost = 0.0; 
+		string city = "";
+		double avg_profit = 0.0;
+		double best_profit= 0.0; 
+		string best_city = "";
+	}
+	
+2.	profit::profit(){}
+	void profit::set_avg_buidling_cost(double b){
+		avg_building_cost = b; 
+	}
+	void profit::set_avg_sale_price(double s){
+		avg_sale_price = s; 
+	}
+	void profit::set_city(string c){
+		city = c; 
+	}
+	double profit::get_avg_buidling_cost(){
+		return avg_building_cost; 
+	}
+	double profit::get_avg_sale_price(){
+			return avg_sale_price; 
+	}
+	string profit::get_city(){
+		return city; 
+	}
+	void profit::calc_avg_profit(){
+		avg_profit = avg_sale_price - avg_building_cost;
+	}
+	void profit::get_best_profit(){
+		if (avg_profit > best_profit){
+			best_profit = avg_profit; 
+			best_city = city;
+		}
+	}
+
+3.a. double credit_limit should be private and to fix the issue a double credit_limit parameter should be added to the constructor. 
+3.b. string zipcode; string get_zipcode(); 

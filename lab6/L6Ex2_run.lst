@@ -1,0 +1,143 @@
+Script started on 2019-11-12 22:01:45-0800
+]0;adamant@ubuntu: ~/Documents/cse201/lab6[01;32madamant@ubuntu[00m:[01;34m~/Documents/cse201/lab6[00m$ exitcd lab6/Documents/cse201/[13P./a.out
+1. Add new customer.
+2. Make new purchase.
+3. View balance.
+4. Print all customers.
+5. Exit.
+$: 1
+Name: John s     ane PArker     arker
+Address: 123 golden state ave
+City: New york
+State: Newyork
+Zipcode: 20304
+Credit Limit: 500
+1. Add new customer.
+2. Make new purchase.
+3. View balance.
+4. Print all customers.
+5. Exit.
+$: 4
+John Doe
+123 Evergreen Terrace
+Springfield
+Massachussettes
+4000
+-----------
+Jane Parker
+123 golden state ave
+New york
+Newyork
+500
+-----------
+1. Add new customer.
+2. Make new purchase.
+3. View balance.
+4. Print all customers.
+5. Exit.
+$: 3
+For which customer would you like to view their balance? 
+1. John Doe
+2. Jane Parker
+$: 1
+0
+1. Add new customer.
+2. Make new purchase.
+3. View balance.
+4. Print all customers.
+5. Exit.
+$: 2
+For which customer would you like to make the purchase? 
+1. John Doe
+2. Jane Parker
+$: 2
+Enter price of purchase: 500
+Purchase approved!
+
+1. Add new customer.
+2. Make new purchase.
+3. View balance.
+4. Print all customers.
+5. Exit.
+$: 3
+For which customer would you like to view their balance? 
+1. John Doe
+2. Jane Parker
+$: 2
+500
+1. Add new customer.
+2. Make new purchase.
+3. View balance.
+4. Print all customers.
+5. Exit.
+$: 2
+For which customer would you like to make the purchase? 
+1. John Doe
+2. Jane Parker
+$: 2
+Enter price of purchase: 423
+Purchase denied! New purchase would exceed credit limit.
+
+1. Add new customer.
+2. Make new purchase.
+3. View balance.
+4. Print all customers.
+5. Exit.
+$: 3
+For which customer would you like to view their balance? 
+1. John Doe
+2. Jane Parker
+$: 2
+500
+1. Add new customer.
+2. Make new purchase.
+3. View balance.
+4. Print all customers.
+5. Exit.
+$: 2
+For which customer would you like to make the purchase? 
+1. John Doe
+2. Jane Parker
+$: 1
+Enter price of purchase: 300
+Purchase approved!
+
+1. Add new customer.
+2. Make new purchase.
+3. View balance.
+4. Print all customers.
+5. Exit.
+$: 3
+For which customer would you like to view their balance? 
+1. John Doe
+2. Jane Parker
+$: 1
+300
+1. Add new customer.
+2. Make new purchase.
+3. View balance.
+4. Print all customers.
+5. Exit.
+$: 4
+John Doe
+123 Evergreen Terrace
+Springfield
+Massachussettes
+4000
+-----------
+Jane Parker
+123 golden state ave
+New york
+Newyork
+500
+-----------
+1. Add new customer.
+2. Make new purchase.
+3. View balance.
+4. Print all customers.
+5. Exit.
+$: 5
+]0;adamant@ubuntu: ~/Documents/cse201/lab6[01;32madamant@ubuntu[00m:[01;34m~/Documents/cse201/lab6[00m$ exit
+exit
+
+Script done on 2019-11-12 22:03:39-0800
