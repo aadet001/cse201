@@ -1,23 +1,86 @@
+/*
+
+CSE201-F19 Tuesday Lab (depending on your lab day)
+
+@file L6_Ex1.cpp
+
+@author Akinyemi Adetunji 
+@date November 12, 2019
+
+DESCRIPTION: In a prewritten 2 player tic tac toe game, rewrite the program
+to replace player 2 with a computer 
+
+
+ALGORITHM:
+
+when it's time for player 2 to make a move, a function (compMove) is called; this is 
+where the computer "makes a move." In the function a vector is created containing
+all posible moves. a position is randomly picked from the list. once a position
+is picked the element at that position is removed, shortening the list and 
+preventing the computer from making the same move again. The function return
+the element that ws removed from vector and is gets passed as though it were 
+the original player 2. 
+ 
+
+*/
+
 #include <iostream>
 #include <cstdlib>
+#include <vector>
 
 using namespace std;
 
+
+
 char square[] = {'o','1','2','3','4','5','6','7','8','9'};
-
-/*
-    winning moves
-    {1,2,3} ,{3,2,1}
-    ,{4,5,6} ,{6,5,4}
-    ,{7,8,9} ,{9,8,7}
-    ,{1,5,9} ,{9,5,1}
-    ,{1,4,7} ,{7,4,1}
-    ,{2,5,8} ,{8,5,2}
-    ,{3,6,9} ,{9,6,3}
-    ,{3,5,7} ,{7,5,3}
+int movesArr[] = {1,2,3,4,5,6,7,8,9};
+vector<int> moves; 
 
 
-*/
+
+//initilize 2d vector
+vector<vector<int> > m(16, vector<int>(3));
+
+//winning moves
+int move[16][3] = 
+{{1,2,3}, {1,5,9}, {1,4,7},
+{2,5,8}, {3,2,1}, {3,5,7}, 
+{3,6,9}, {4,5,6}, {6,5,4}, 
+{7,4,1}, {7,5,3}, {7,8,9}, 
+{8,5,2}, {9,8,7}, {9,5,1}, 
+{9,6,3}};
+
+//convert winning moves 2d array to 2d vector
+// for (int i = 0; i < 16; i++)
+// {
+//     for (int j = 0; j < 3; j++)
+//     {
+//         m[i][j] = move[i][j]; 
+//         //cout << m[i][j];  
+//     }
+//     //cout << endl; 
+// }
+
+void pop_vector(){
+    for(unsigned int i = 0; i < 9; i++){
+        moves.push_back(movesArr[i]); 
+    }
+}
+
+int compMove(){
+    int curr_move; 
+    int r; 
+
+    srand(time(0)); 
+   
+    r = (rand()%moves.size());
+    curr_move = moves[r]; 
+
+    moves.erase(moves.begin()+r);
+
+    return curr_move; 
+}
+
 
 int checkwin();
 void board();
@@ -25,6 +88,8 @@ void board();
 int main()
 {
 	int player = 1,i,choice;
+
+    pop_vector(); 
 
     char mark;
     do
@@ -37,8 +102,14 @@ int main()
         	player = 2 ;
         // player=(player%2)?1:2;
 
-        cout << "Player " << player << ", enter a number:  ";
-        cin >> choice;
+        //changes
+        if (player == 1){
+            cout << "Player " << player << ", enter a number:  ";
+            cin >> choice;    
+        } else {
+            choice = compMove(); 
+        }
+        
 
         if (player == 1)
         	mark = 'X' ;
@@ -88,7 +159,12 @@ int main()
     board();
     if(i==1)
 
-        cout<<"==>\aPlayer "<<--player<<" win ";
+        // cout<<"==>\aPlayer "<<--player<<" win ";
+        if(--player == 1){
+            cout<<"==>\aPlayer "<<--player<<" win! ";
+        } else{
+            cout<<"==>\aComputer wins! ";
+        }
     else
         cout<<"==>\aGame draw";
 
@@ -141,7 +217,7 @@ int checkwin()
 
 
 /*******************************************************************
-     FUNCTION TO DRAW BOARD OF TIC TAC TOE WITH PLAYERS MARK
+     FUNCTION TO DRAW BOARD OF TIC TAC TOE WITH PLAYERS MARK                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 ********************************************************************/
 
 

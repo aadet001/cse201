@@ -1,3 +1,22 @@
+/*
+
+CSE201-F19 Tuesday Lab (depending on your lab day)
+
+@file L6_Ex1.cpp
+
+@author Akinyemi Adetunji 
+@date November 12, 2019
+
+DESCRIPTION: print bar chart using information provided
+
+
+ALGORITHM: use nested for loop to go through both arrays. make an asterisk for
+every other volume value. 
+
+ 
+
+*/
+
 #include <iostream>
 #include <string>
 
