@@ -33,6 +33,8 @@ using namespace std;
 
 
 char square[] = {'o','1','2','3','4','5','6','7','8','9'};
+
+// addition
 int movesArr[] = {1,2,3,4,5,6,7,8,9};
 vector<int> moves; 
 
@@ -42,13 +44,13 @@ vector<int> moves;
 vector<vector<int> > m(16, vector<int>(3));
 
 //winning moves
-int move[16][3] = 
-{{1,2,3}, {1,5,9}, {1,4,7},
-{2,5,8}, {3,2,1}, {3,5,7}, 
-{3,6,9}, {4,5,6}, {6,5,4}, 
-{7,4,1}, {7,5,3}, {7,8,9}, 
-{8,5,2}, {9,8,7}, {9,5,1}, 
-{9,6,3}};
+// int move[16][3] = 
+// {{1,2,3}, {1,5,9}, {1,4,7},
+// {2,5,8}, {3,2,1}, {3,5,7}, 
+// {3,6,9}, {4,5,6}, {6,5,4}, 
+// {7,4,1}, {7,5,3}, {7,8,9}, 
+// {8,5,2}, {9,8,7}, {9,5,1}, 
+// {9,6,3}};
 
 //convert winning moves 2d array to 2d vector
 // for (int i = 0; i < 16; i++)
@@ -77,6 +79,39 @@ int compMove(){
     curr_move = moves[r]; 
 
     moves.erase(moves.begin()+r);
+
+    if (curr_move == 1 && square[1] == '1')
+
+        return curr_move;
+    else if (curr_move == 2 && square[2] == '2')
+
+        return curr_move;
+    else if (curr_move == 3 && square[3] == '3')
+
+        return curr_move;
+    else if (curr_move == 4 && square[4] == '4')
+
+        return curr_move;
+    else if (curr_move == 5 && square[5] == '5')
+
+        return curr_move;
+    else if (curr_move == 6 && square[6] == '6')
+
+        return curr_move;
+    else if (curr_move == 7 && square[7] == '7')
+
+        return curr_move;
+    else if (curr_move == 8 && square[8] == '8')
+
+        return curr_move;
+    else if (curr_move == 9 && square[9] == '9')
+
+        return curr_move;
+    else
+    {
+        //cout<<"Invalid move ";
+        curr_move = compMove(); 
+    }
 
     return curr_move; 
 }
@@ -161,7 +196,7 @@ int main()
 
         // cout<<"==>\aPlayer "<<--player<<" win ";
         if(--player == 1){
-            cout<<"==>\aPlayer "<<--player<<" win! ";
+            cout<<"==>\aPlayer 1"<<" win! ";
         } else{
             cout<<"==>\aComputer wins! ";
         }
