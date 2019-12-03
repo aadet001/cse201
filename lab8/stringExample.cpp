@@ -23,6 +23,8 @@ int main(int argc, char ** argv){
 
 	cv = str3.compare(str4) ;
 
+	cout << "value of cv = " << cv << endl; 
+
 	if (cv > 0)
 		cout << "String 1 is greater.\n" ;
 	if (cv == 0)

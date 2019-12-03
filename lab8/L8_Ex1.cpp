@@ -1,5 +1,6 @@
 #include <iostream> 
 #include <string>
+#include <algorithm>
 
 using namespace std; 
 
@@ -14,6 +15,7 @@ class myString{
 	void swap(char *c[]) ;
 	char * substr(char c[] , int a, int b) ;
 	int compare(char c[]) ;
+	void clearstring(); 
 
 	void prints(){
 		cout << s << endl; 
@@ -37,8 +39,24 @@ myString::myString( char *c){
 	slen = k; 
 }
 
-void myString::setValue(char c[]){
+void myString::clearstring(){
+	int k = (sizeof(s)/sizeof(*s));
+	for (int i = 0; i < k; ++i)
+	{
+		s[i] = 0; 
+	}
 
+	slen = 0; 
+}
+
+void myString::setValue(char c[]){
+	clearstring(); 
+	int k = (sizeof(c)/sizeof(*c));
+	cout << k  << endl; 
+	for(int i = 0; i < k; i++ ){
+		s[i] = c[i]; 
+	}  
+	slen = k; 
 }
 
 int myString::length() const{
@@ -46,20 +64,37 @@ int myString::length() const{
 }
 
 void myString::copy(char c[]){
-
+	clearstring(); 
+	int k = (sizeof(c)/sizeof(*c));
+	cout << k  << endl; 
+	for(int i = 0; i < k; i++ ){
+		s[i] = c[i]; 
+	}  
+	slen = k; 
 }
 
+//work
 void myString::swap(char *c[]){
-
+	int k = (sizeof(c)/sizeof(*c));
+	char temp[40]; 
+	
 }
 
 char * myString::substr(char c[], int a, int b){
-
+	int k = (sizeof(c)/sizeof(*c));
+	cout << k  << endl; 
+	for(int i = 0; i < k; i++ ){
+		if()
+	}  
 }
 
 int myString::compare(char c[]){
+	int k = (sizeof(c)/sizeof(*c));
 
+	return (slen-k); 
 }
+
+
 
 int main(){
 	char k[] = {'h','e','l','l','o'}; 
